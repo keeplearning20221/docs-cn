@@ -1,6 +1,6 @@
 ---
 title: USE
-summary: TiDB 数据库中 USE 的使用概况。
+summary: 平凯数据库中 USE 的使用概况。
 ---
 
 # USE
@@ -123,7 +123,7 @@ SHOW TABLES;
 
 ## MySQL 兼容性
 
-`USE` 语句与 MySQL 完全兼容。如发现任何兼容性差异，请尝试 [TiDB 支持资源](/support.md)。
+`USE` 语句与 MySQL 完全兼容。如发现任何兼容性差异，请在 GitHub 上提交 [issue](https://github.com/pingcap/tidb/issues/new/choose)。
 
 ## 另请参阅
 

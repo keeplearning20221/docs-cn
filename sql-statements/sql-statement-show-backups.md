@@ -1,6 +1,6 @@
 ---
 title: SHOW [BACKUPS|RESTORES]
-summary: TiDB 数据库中 SHOW [BACKUPS|RESTORES] 的使用概况。
+summary: 平凯数据库中 SHOW [BACKUPS|RESTORES] 的使用概况。
 ---
 
 # SHOW [BACKUPS|RESTORES]
@@ -91,7 +91,7 @@ SHOW BACKUPS WHERE `Progress` < 25.0;
 
 ## MySQL 兼容性
 
-该语句是 TiDB 对 MySQL 语法的扩展。
+该语句是平凯数据库对 MySQL 语法的扩展。
 
 ## 另请参阅
 

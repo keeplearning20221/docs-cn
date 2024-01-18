@@ -1,11 +1,11 @@
 ---
 title: LOAD STATS
-summary: TiDB 数据库中 LOAD STATS 的使用概况。
+summary: 平凯数据库中 LOAD STATS 的使用概况。
 ---
 
 # LOAD STATS
 
-`LOAD STATS` 语句用于将统计信息加载到 TiDB 中。
+`LOAD STATS` 语句用于将统计信息加载到 TiDB Server 中。
 
 ## 语法图
 
@@ -34,8 +34,8 @@ Query OK, 0 rows affected (0.00 sec)
 
 ## MySQL 兼容性
 
-该语句是 TiDB 对 MySQL 语法的扩展。
+该语句是平凯数据库对 MySQL 语法的扩展。
 
 ## 另请参阅
 
-* [统计信息](/statistics.md)
+* 统计信息

@@ -1,6 +1,6 @@
 ---
 title: BATCH
-summary: TiDB 数据库中 BATCH 的使用概况。
+summary: 平凯数据库中 BATCH 的使用概况。
 ---
 
 # BATCH
@@ -45,7 +45,7 @@ ShardableStmt ::=
 
 ## MySQL 兼容性
 
-BATCH 语句是 TiDB 独有的语句，与 MySQL 不兼容。
+BATCH 语句是平凯数据库独有的语句，与 MySQL 不兼容。
 
 ## 另请参阅
 

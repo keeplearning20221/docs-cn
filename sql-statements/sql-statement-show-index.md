@@ -1,6 +1,6 @@
 ---
 title: SHOW INDEX [FROM|IN]
-summary: TiDB 数据库中 SHOW INDEX [FROM|IN] 的使用概况。
+summary: 平凯数据库中 SHOW INDEX [FROM|IN] 的使用概况。
 ---
 
 # SHOW INDEX [FROM|IN]

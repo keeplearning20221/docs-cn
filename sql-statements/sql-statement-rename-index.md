@@ -1,11 +1,11 @@
 ---
 title: RENAME INDEX
-summary: TiDB 数据库中 RENAME INDEX 的使用概况。
+summary: 平凯数据库中 RENAME INDEX 的使用概况。
 ---
 
 # RENAME INDEX
 
-`ALTER TABLE .. RENAME INDEX` 语句用于对已有索引进行重命名。这在 TiDB 中是即时操作的，仅需更改元数据。
+`ALTER TABLE .. RENAME INDEX` 语句用于对已有索引进行重命名。这在平凯数据库中是即时操作的，仅需更改元数据。
 
 ## 语法图
 
@@ -77,7 +77,7 @@ Create Table: CREATE TABLE `t1` (
 
 ## MySQL 兼容性
 
-`RENAME INDEX` 语句与 MySQL 完全兼容。如发现任何兼容性差异，请尝试 [TiDB 支持资源](/support.md)。
+`RENAME INDEX` 语句与 MySQL 完全兼容。如发现任何兼容性差异，请在 GitHub 上提交 [issue](https://github.com/pingcap/tidb/issues/new/choose)。
 
 ## 另请参阅
 

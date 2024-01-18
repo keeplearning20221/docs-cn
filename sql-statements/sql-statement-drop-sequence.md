@@ -1,6 +1,6 @@
 ---
 title: DROP SEQUENCE
-summary: TiDB 数据库中 DROP SEQUENCE 的使用概况。
+summary: 平凯数据库中 DROP SEQUENCE 的使用概况。
 ---
 
 # DROP SEQUENCE
@@ -46,7 +46,7 @@ Query OK, 0 rows affected (0.03 sec)
 
 ## MySQL 兼容性
 
-该语句是 TiDB 的扩展，序列的实现借鉴自 MariaDB。
+该语句是平凯数据库的扩展，序列的实现借鉴自 MariaDB。
 
 ## 另请参阅
 

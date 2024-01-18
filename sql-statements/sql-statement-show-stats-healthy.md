@@ -1,6 +1,6 @@
 ---
 title: SHOW STATS_HEALTHY
-summary: TiDB 数据库中 SHOW STATS_HEALTHY 的使用概况。
+summary: 平凯数据库中 SHOW STATS_HEALTHY 的使用概况。
 ---
 
 # SHOW STATS_HEALTHY
@@ -84,9 +84,9 @@ SHOW STATS_HEALTHY;
 
 ## MySQL 兼容性
 
-`SHOW STATS_HEALTHY` 语句是 TiDB 对 MySQL 语法的扩展。
+`SHOW STATS_HEALTHY` 语句是平凯数据库对 MySQL 语法的扩展。
 
 ## 另请参阅
 
 * [ANALYZE](/sql-statements/sql-statement-analyze-table.md)
-* [统计信息简介](/statistics.md)
+* 统计信息简介

@@ -1,17 +1,13 @@
 ---
 title: BACKUP
-summary: TiDB 数据库中 BACKUP 的使用概况。
+summary: 平凯数据库中 BACKUP 的使用概况。
 ---
 
 # BACKUP
 
-> **警告：**
->
-> `BACKUP` 语句目前为实验特性，不建议在生产环境中使用。该功能可能会在未事先通知的情况下发生变化或删除。如果发现 bug，请在 GitHub 上提 [issue](https://github.com/pingcap/tidb/issues) 反馈。
+`BACKUP` 语句用于对平凯数据库集群执行分布式备份操作。
 
-`BACKUP` 语句用于对 TiDB 集群执行分布式备份操作。
-
-`BACKUP` 语句使用的引擎与 [BR](/br/backup-and-restore-overview.md) 相同，但备份过程是由 TiDB 本身驱动，而非单独的 BR 工具。BR 工具的优势和警告也适用于 `BACKUP` 语句。
+`BACKUP` 语句使用的引擎与 BR 相同，但备份过程是由 TiDB Server 本身驱动，而非单独的 BR 工具。BR 工具的优势和警告也适用于 `BACKUP` 语句。
 
 执行 `BACKUP` 需要 `BACKUP_ADMIN` 或 `SUPER` 权限。此外，执行备份的 TiDB 节点和集群中的所有 TiKV 节点都必须有对目标存储的读或写权限。
 
@@ -109,7 +105,7 @@ BR 支持备份数据到 Amazon S3 或 Google Cloud Storage (GCS)：
 BACKUP DATABASE `test` TO 's3://example-bucket-2020/backup-05/?access-key={YOUR_ACCESS_KEY}&secret-access-key={YOUR_SECRET_KEY}';
 ```
 
-有关详细的 URL 语法，见[外部存储服务的 URI 格式](/external-storage-uri.md)。
+有关详细的 URL 语法，见外部存储 URI 格式。
 
 当运行在云环境中时，不能分发凭证，可设置 `SEND_CREDENTIALS_TO_TIKV` 选项为 `FALSE`：
 
@@ -184,7 +180,7 @@ BACKUP DATABASE `test` TO 'local:///mnt/backup/hist03'
 
 ## MySQL 兼容性
 
-该语句是 TiDB 对 MySQL 语法的扩展。
+该语句是平凯数据库对 MySQL 语法的扩展。
 
 ## 另请参阅
 

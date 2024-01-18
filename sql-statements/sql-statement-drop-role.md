@@ -1,6 +1,6 @@
 ---
 title: DROP ROLE
-summary: TiDB 数据库中 DROP ROLE 的使用概况。
+summary: 平凯数据库中 DROP ROLE 的使用概况。
 ---
 
 # DROP ROLE
@@ -162,7 +162,7 @@ ERROR 3530 (HY000): `analyticsteam`@`%` is is not granted to jennifer@%
 
 ## MySQL 兼容性
 
-`DROP ROLE` 语句与 MySQL 8.0 的角色功能完全兼容。如发现任何兼容性差异，请尝试 [TiDB 支持资源](/support.md)。
+`DROP ROLE` 语句与 MySQL 8.0 的角色功能完全兼容。如发现任何兼容性差异，请在 GitHub 上提交 [issue](https://github.com/pingcap/tidb/issues/new/choose)。
 
 ## 另请参阅
 

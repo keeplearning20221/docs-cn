@@ -1,11 +1,11 @@
 ---
 title: SHOW CHARACTER SET
-summary: TiDB 数据库中 SHOW CHARACTER SET 的使用概况。
+summary: 平凯数据库中 SHOW CHARACTER SET 的使用概况。
 ---
 
 # SHOW CHARACTER SET
 
-`SHOW CHARACTER SET` 语句提供 TiDB 中可用字符集的静态列表。此列表不反映当前连接或用户的任何属性。
+`SHOW CHARACTER SET` 语句提供平凯数据库中可用字符集的静态列表。此列表不反映当前连接或用户的任何属性。
 
 ## 语法图
 
@@ -40,7 +40,7 @@ SHOW CHARACTER SET;
 
 ## MySQL 兼容性
 
-`SHOW CHARACTER SET` 语句功能与 MySQL 完全兼容。注意，TiDB 中字符集的默认排序规则与 MySQL 有所不同，具体可以参考[与 MySQL 兼容性对比](/mysql-compatibility.md#默认设置)。如发现任何兼容性差异，请尝试 [TiDB 支持资源](/support.md)。
+`SHOW CHARACTER SET` 语句功能与 MySQL 完全兼容。注意，平凯数据库中字符集的默认排序规则与 MySQL 有所不同，具体可以参考[与 MySQL 兼容性对比](/mysql-compatibility.md#默认设置)。如发现任何兼容性差异，请在 GitHub 上提交 [issue](https://github.com/pingcap/tidb/issues/new/choose)。
 
 ## 另请参阅
 

@@ -1,6 +1,6 @@
 ---
 title: CREATE INDEX
-summary: CREATE INDEX 在 TiDB 中的使用概况
+summary: CREATE INDEX 在平凯数据库中的使用概况
 ---
 
 # CREATE INDEX
@@ -365,7 +365,7 @@ Query OK, 1 row affected (0.00 sec)
 
 ### 使用多值索引
 
-请参考[索引的选择](/choose-index.md#使用多值索引)。
+请参考索引的选择。
 
 ### 特性与限制
 
@@ -378,8 +378,8 @@ Query OK, 1 row affected (0.00 sec)
 - 相比于普通索引，DML 会对多值索引产生更多的索引记录的修改，因此多值索引会带来比普通索引更大的性能影响。
 - 由于多值索引是一种特殊的表达式索引，因此具有表达式索引的限制。
 - 使用备份恢复工具 (BR)、同步工具 (TiCDC)、导入工具 (TiDB Lightning) 无法将定义了多值索引的表备份、同步、导入到低于 v6.6.0 版本的 TiDB。
-- 由于多值索引的统计信息暂时还没有被收集，多值索引的选择率基于固定假设。当查询命中多个多值索引时，可能无法选取最优的索引。在这种情况下，建议用优化器提示 [`use_index_merge`](/optimizer-hints.md#use_index_merget1_name-idx1_name--idx2_name-) 来固定执行计划。具体使用方式请参考[使用多值索引](/choose-index.md#使用多值索引)。
-- 条件复杂的查询有可能无法选择到多值索引，多值索引支持的条件模式请参考[使用多值索引](/choose-index.md#使用多值索引)。
+- 由于多值索引的统计信息暂时还没有被收集，多值索引的选择率基于固定假设。当查询命中多个多值索引时，可能无法选取最优的索引。在这种情况下，建议用优化器提示 [`use_index_merge`](/optimizer-hints.md#use_index_merget1_name-idx1_name--idx2_name-) 来固定执行计划。具体使用方式请参考使用多值索引。
+- 条件复杂的查询有可能无法选择到多值索引，多值索引支持的条件模式请参考使用多值索引。
 
 ## 不可见索引
 
@@ -398,7 +398,7 @@ CREATE UNIQUE INDEX c1 ON t1 (c1) INVISIBLE;
 
 ## MySQL 兼容性
 
-* TiDB 支持解析 `FULLTEXT` 和 `SPATIAL` 语法，但尚不支持使用 `FULLTEXT`，`HASH` 和 `SPATIAL` 索引。
+* TiDB Server 支持解析 `FULLTEXT` 和 `SPATIAL` 语法，但尚不支持使用 `FULLTEXT`，`HASH` 和 `SPATIAL` 索引。
 * 不支持降序索引 （类似于 MySQL 5.7）。
 * 无法向表中添加 `CLUSTERED` 类型的 `PRIMARY KEY`。要了解关于 `CLUSTERED` 主键的详细信息，请参考[聚簇索引](/clustered-indexes.md)。
 * 表达式索引与视图存在兼容性问题。通过视图进行查询时，无法使用上表达式索引。
@@ -407,8 +407,8 @@ CREATE UNIQUE INDEX c1 ON t1 (c1) INVISIBLE;
 
 ## 另请参阅
 
-* [索引的选择](/choose-index.md)
-* [错误索引的解决方案](/wrong-index-solution.md)
+* 索引的选择
+* 错误索引的解决方案
 * [ADD INDEX](/sql-statements/sql-statement-add-index.md)
 * [DROP INDEX](/sql-statements/sql-statement-drop-index.md)
 * [RENAME INDEX](/sql-statements/sql-statement-rename-index.md)

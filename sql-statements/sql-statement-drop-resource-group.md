@@ -1,6 +1,6 @@
 ---
 title: DROP RESOURCE GROUP
-summary: TiDB 数据库中 DROP RESOURCE GROUP 的使用概况。
+summary: 平凯数据库中 DROP RESOURCE GROUP 的使用概况。
 ---
 
 # DROP RESOURCE GROUP
@@ -76,10 +76,10 @@ Empty set (0.00 sec)
 
 ## MySQL 兼容性
 
-MySQL 也支持 [DROP RESOURCE GROUP](https://dev.mysql.com/doc/refman/8.0/en/drop-resource-group.html)，但 TiDB 不支持 `FORCE` 参数。
+MySQL 也支持 [DROP RESOURCE GROUP](https://dev.mysql.com/doc/refman/8.0/en/drop-resource-group.html)，但平凯数据库不支持 `FORCE` 参数。
 
 ## 另请参阅
 
 * [ALTER RESOURCE GROUP](/sql-statements/sql-statement-alter-resource-group.md)
 * [CREATE RESOURCE GROUP](/sql-statements/sql-statement-create-resource-group.md)
-* [RU](/tidb-resource-control.md#什么是-request-unit-ru)
+* RU

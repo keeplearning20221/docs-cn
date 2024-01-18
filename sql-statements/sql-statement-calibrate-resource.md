@@ -1,6 +1,6 @@
 ---
 title: CALIBRATE RESOURCE
-summary: TiDB 数据库中 CALIBRATE RESOURCE 的使用概况。
+summary: 平凯数据库中 CALIBRATE RESOURCE 的使用概况。
 ---
 
 # `CALIBRATE RESOURCE`
@@ -20,7 +20,7 @@ CalibrateOption ::=
 
 ## 预估方式
 
-TiDB 提供两种预估方式：
+平凯数据库提供两种预估方式：
 
 ### 根据实际负载估算容量
 

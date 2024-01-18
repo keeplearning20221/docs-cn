@@ -1,11 +1,11 @@
 ---
 title: ROLLBACK
-summary: TiDB 数据库中 ROLLBACK 的使用概况。
+summary: 平凯数据库中 ROLLBACK 的使用概况。
 ---
 
 # ROLLBACK
 
-`ROLLBACK` 语句用于还原 TiDB 内当前事务中的所有更改，作用与 `COMMIT` 语句相反。
+`ROLLBACK` 语句用于还原数据库内当前事务中的所有更改，作用与 `COMMIT` 语句相反。
 
 ## 语法图
 

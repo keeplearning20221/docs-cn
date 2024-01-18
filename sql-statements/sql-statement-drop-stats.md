@@ -1,6 +1,6 @@
 ---
 title: DROP STATS
-summary: TiDB 数据库中 DROP STATS 的使用概况。
+summary: 平凯数据库中 DROP STATS 的使用概况。
 ---
 
 # DROP STATS
@@ -69,8 +69,8 @@ Empty set (0.00 sec)
 
 ## MySQL 兼容性
 
-该语句是 TiDB 对 MySQL 语法的扩展。
+该语句是平凯数据库对 MySQL 语法的扩展。
 
 ## 另请参阅
 
-* [统计信息简介](/statistics.md)
+* 统计信息简介

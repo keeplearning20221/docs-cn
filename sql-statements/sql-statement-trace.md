@@ -1,6 +1,6 @@
 ---
 title: TRACE
-summary: TiDB 数据库中 TRACE 的使用概况。
+summary: 平凯数据库中 TRACE 的使用概况。
 ---
 
 # TRACE
@@ -60,7 +60,7 @@ trace format='json' select * from mysql.user;
 
 ## MySQL 兼容性
 
-`TRACE` 语句是 TiDB 对 MySQL 语法的扩展。
+`TRACE` 语句是平凯数据库对 MySQL 语法的扩展。
 
 ## 另请参阅
 

@@ -1,6 +1,6 @@
 ---
 title: RENAME USER
-summary: TiDB 数据库中 RENAME USER 的使用概况。
+summary: 平凯数据库中 RENAME USER 的使用概况。
 ---
 
 # RENAME USER
@@ -74,7 +74,7 @@ ERROR 1141 (42000): There is no such grant defined for user 'newuser' on host '%
 
 ## MySQL 兼容性
 
-`RENAME USER` 语句与 MySQL 完全兼容。如发现任何兼容性差异，请尝试 [TiDB 支持资源](/support.md)。
+`RENAME USER` 语句与 MySQL 完全兼容。如发现任何兼容性差异，请在 GitHub 上提交 [issue](https://github.com/pingcap/tidb/issues/new/choose)。
 
 ## 另请参阅
 

@@ -1,15 +1,15 @@
 ---
 title: CREATE [GLOBAL|SESSION] BINDING
-summary: TiDB 数据库中 CREATE [GLOBAL|SESSION] BINDING 的使用概况。
+summary: 平凯数据库中 CREATE [GLOBAL|SESSION] BINDING 的使用概况。
 ---
 
 # CREATE [GLOBAL|SESSION] BINDING
 
-`CREATE [GLOBAL|SESSION] BINDING` 语句用于在 TiDB 中创建新的执行计划绑定。绑定可用于将优化器 Hint 插入语句中，而无需更改底层查询。
+`CREATE [GLOBAL|SESSION] BINDING` 语句用于在 TiDB Server 中创建新的执行计划绑定。绑定可用于将优化器 Hint 插入语句中，而无需更改底层查询。
 
 `BINDING` 语句可以在 `GLOBAL` 或者 `SESSION` 作用域内创建执行计划绑定。在不指定作用域时，默认的作用域为 `SESSION`。
 
-被绑定的 SQL 语句会被参数化后存储到系统表中。在处理 SQL 查询时，只要参数化后的 SQL 语句和系统表中某个被绑定的 SQL 语句一致，并且系统变量 `tidb_use_plan_baselines` 的值为 `ON`（其默认值为 `ON`），即可使用相应的优化器 Hint。如果存在多个可匹配的执行计划，优化器会从中选择代价最小的一个进行绑定。更多信息，请参考[创建绑定](/sql-plan-management.md#创建绑定)。
+被绑定的 SQL 语句会被参数化后存储到系统表中。在处理 SQL 查询时，只要参数化后的 SQL 语句和系统表中某个被绑定的 SQL 语句一致，并且系统变量 `tidb_use_plan_baselines` 的值为 `ON`（其默认值为 `ON`），即可使用相应的优化器 Hint。如果存在多个可匹配的执行计划，优化器会从中选择代价最小的一个进行绑定。更多信息，请参考创建绑定。
 
 ## 语法图
 
@@ -170,12 +170,12 @@ mysql> SELECT @@LAST_PLAN_FROM_BINDING;
 
 ## MySQL 兼容性
 
-`CREATE [GLOBAL|SESSION] BINDING` 语句是 TiDB 对 MySQL 语法的扩展。
+`CREATE [GLOBAL|SESSION] BINDING` 语句是平凯数据库对 MySQL 语法的扩展。
 
 ## 另请参阅
 
 * [DROP [GLOBAL|SESSION] BINDING](/sql-statements/sql-statement-drop-binding.md)
 * [SHOW [GLOBAL|SESSION] BINDINGS](/sql-statements/sql-statement-show-bindings.md)
 * [ANALYZE](/sql-statements/sql-statement-analyze-table.md)
-* [Optimizer Hints](/optimizer-hints.md)
+* Optimizer Hints
 * [执行计划管理 (SPM)](/sql-plan-management.md)

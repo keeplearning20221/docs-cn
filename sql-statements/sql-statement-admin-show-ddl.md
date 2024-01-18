@@ -1,6 +1,6 @@
 ---
 title: ADMIN SHOW DDL [JOBS|JOB QUERIES]
-summary: TiDB 数据库中 ADMIN SHOW DDL [JOBS|JOB QUERIES] 的使用概况。
+summary: 平凯数据库中 ADMIN SHOW DDL [JOBS|JOB QUERIES] 的使用概况。
 ---
 
 # ADMIN SHOW DDL [JOBS|JOB QUERIES]

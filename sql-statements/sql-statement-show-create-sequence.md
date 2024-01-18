@@ -1,6 +1,6 @@
 ---
 title: SHOW CREATE SEQUENCE
-summary: TiDB 数据库中 SHOW CREATE SEQUENCE 的使用概况。
+summary: 平凯数据库中 SHOW CREATE SEQUENCE 的使用概况。
 ---
 
 # SHOW CREATE SEQUENCE
@@ -46,7 +46,7 @@ SHOW CREATE SEQUENCE seq;
 
 ## MySQL 兼容性
 
-该语句是 TiDB 的扩展，序列的实现借鉴自 MariaDB。
+该语句是平凯数据库的扩展，序列的实现借鉴自 MariaDB。
 
 ## 另请参阅
 

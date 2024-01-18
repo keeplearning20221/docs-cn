@@ -1,6 +1,6 @@
 ---
 title: DESCRIBE
-summary: TiDB 数据库中 DESCRIBE 的使用概况。
+summary: 平凯数据库中 DESCRIBE 的使用概况。
 ---
 
 # DESCRIBE

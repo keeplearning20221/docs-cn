@@ -1,11 +1,11 @@
 ---
 title: ADD COLUMN
-summary: TiDB 数据库中 ADD COLUMN 的使用概况。
+summary: 平凯数据库中 ADD COLUMN 的使用概况。
 ---
 
 # ADD COLUMN
 
-`ALTER TABLE.. ADD COLUMN` 语句用于在已有表中添加列。在 TiDB 中，`ADD COLUMN` 为在线操作，不会阻塞表中的数据读写。
+`ALTER TABLE.. ADD COLUMN` 语句用于在已有表中添加列。在平凯数据库中，`ADD COLUMN` 为在线操作，不会阻塞表中的数据读写。
 
 ## 语法图
 

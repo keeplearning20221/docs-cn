@@ -1,17 +1,13 @@
 ---
 title: RESTORE
-summary: TiDB 数据库中 RESTORE 的使用概况。
+summary: 平凯数据库中 RESTORE 的使用概况。
 ---
 
 # RESTORE
 
-> **警告：**
->
-> `RESTORE` 语句目前为实验特性，不建议在生产环境中使用。该功能可能会在未事先通知的情况下发生变化或删除。如果发现 bug，请在 GitHub 上提 [issue](https://github.com/pingcap/tidb/issues) 反馈。
+`RESTORE` 语句用于执行分布式恢复，把 [`BACKUP` 语句](/sql-statements/sql-statement-backup.md)生成的备份文件恢复到数据库集群中。
 
-`RESTORE` 语句用于执行分布式恢复，把 [`BACKUP` 语句](/sql-statements/sql-statement-backup.md)生成的备份文件恢复到 TiDB 集群中。
-
-`RESTORE` 语句使用的引擎与 [BR](/br/backup-and-restore-overview.md) 相同，但恢复过程是由 TiDB 本身驱动，而非单独的 BR 工具。BR 工具的优势和警告也适用于 `RESTORE` 语句。需要注意的是，**`RESTORE` 语句目前不遵循 ACID 原则**。
+`RESTORE` 语句使用的引擎与 BR 相同，但恢复过程是由 TiDB Server 本身驱动，而非单独的 BR 工具。BR 工具的优势和警告也适用于 `RESTORE` 语句。需要注意的是，**`RESTORE` 语句目前不遵循 ACID 原则**。
 
 执行 `RESTORE` 语句前，确保集群已满足以下要求：
 
@@ -104,7 +100,7 @@ BR 支持从 Amazon S3 或 Google Cloud Storage (GCS) 恢复数据：
 RESTORE DATABASE * FROM 's3://example-bucket-2020/backup-05/';
 ```
 
-有关详细的 URI 语法，见[外部存储服务的 URI 格式](/external-storage-uri.md)。
+有关详细的 URL 语法，见外部存储 URI 格式。
 
 当运行在云环境中时，不能分发凭证，可设置 `SEND_CREDENTIALS_TO_TIKV` 选项为 `FALSE`：
 
@@ -134,7 +130,7 @@ RESTORE DATABASE * FROM 's3://example-bucket-2020/backup-06/'
 
 ### 增量恢复
 
-增量恢复没有特殊的语法。TiDB 将识别备份文件属于全量备份或增量备份，然后执行对应的恢复操作，用户只需按照正确顺序进行增量恢复。
+增量恢复没有特殊的语法。数据库将识别备份文件属于全量备份或增量备份，然后执行对应的恢复操作，用户只需按照正确顺序进行增量恢复。
 
 假设按照如下方式创建一个备份任务：
 
@@ -158,7 +154,7 @@ RESTORE DATABASE * FROM 's3://example-bucket/inc-backup-2';
 
 ## MySQL 兼容性
 
-该语句是 TiDB 对 MySQL 语法的扩展。
+该语句是平凯数据库对 MySQL 语法的扩展。
 
 ## 另请参阅
 

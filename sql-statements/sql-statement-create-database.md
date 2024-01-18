@@ -1,11 +1,11 @@
 ---
 title: CREATE DATABASE
-summary: TiDB 数据库中 CREATE DATABASE 的使用概况。
+summary: 平凯数据库中 CREATE DATABASE 的使用概况。
 ---
 
 # CREATE DATABASE
 
-`CREATE DATABASE` 语句用于在 TiDB 上创建新数据库。按照 SQL 标准，“数据库”一词在 MySQL 术语中最接近 “schema”。
+`CREATE DATABASE` 语句用于在 TiDB Server 上创建新数据库。按照 SQL 标准，“数据库”一词在 MySQL 术语中最接近 “schema”。
 
 ## 语法图
 
@@ -51,7 +51,7 @@ create_specification:
 
 当创建已存在的数据库且不指定使用 `IF NOT EXISTS` 时会报错。
 
-`create_specification` 选项用于指定数据库具体的 `CHARACTER SET` 和 `COLLATE`。目前 TiDB 只支持部分的字符集和排序规则，请参照[字符集支持](/character-set-and-collation.md)。
+`create_specification` 选项用于指定数据库具体的 `CHARACTER SET` 和 `COLLATE`。目前平凯数据库只支持部分的字符集和排序规则，请参照[字符集支持](/character-set-and-collation.md)。
 
 ## 示例
 
@@ -102,7 +102,7 @@ SHOW TABLES;
 
 ## MySQL 兼容性
 
-`CREATE DATABASE` 语句与 MySQL 完全兼容。如发现任何兼容性差异，请尝试 [TiDB 支持资源](/support.md)。
+`CREATE DATABASE` 语句与 MySQL 完全兼容。如发现任何兼容性差异，请在 GitHub 上提交 [issue](https://github.com/pingcap/tidb/issues/new/choose)。
 
 ## 另请参阅
 

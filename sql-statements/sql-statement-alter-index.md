@@ -1,6 +1,6 @@
 ---
 title: ALTER INDEX
-summary: TiDB 数据库中 ALTER INDEX 的使用概况。
+summary: 平凯数据库中 ALTER INDEX 的使用概况。
 ---
 
 # ALTER INDEX
@@ -116,9 +116,9 @@ Query OK, 0 rows affected (0.02 sec)
 
 ## MySQL 兼容性
 
-* TiDB 中的不可见索引是基于 MySQL 8.0 中的同等特性构建的。
-* 与 MySQL 类似，TiDB 不允许将主键索引设为不可见。
-* MySQL 中提供的优化器开关 `use_invisible_indexes=on` 可将所有的不可见索引重新设为可见。该功能在 TiDB 中不可用。
+* 平凯数据库中的不可见索引是基于 MySQL 8.0 中的同等特性构建的。
+* 与 MySQL 类似，平凯数据库不允许将主键索引设为不可见。
+* MySQL 中提供的优化器开关 `use_invisible_indexes=on` 可将所有的不可见索引重新设为可见。该功能在平凯数据库中不可用。
 
 ## 另请参阅
 

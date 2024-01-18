@@ -1,6 +1,6 @@
 ---
 title: EXPLAIN ANALYZE
-summary: TiDB 数据库中 EXPLAIN ANALYZE 的使用概况。
+summary: 平凯数据库中 EXPLAIN ANALYZE 的使用概况。
 ---
 
 # EXPLAIN ANALYZE
@@ -291,7 +291,7 @@ RU:273.842670
 
 > **注意：**
 >
-> 该值仅表示本次执行的实际 RU 消耗。由于受缓存的影响（比如[下推计算结果缓存](/coprocessor-cache.md)），同一个 SQL 在每次执行时消耗的 RU 可能会不同。
+> 该值仅表示本次执行的实际 RU 消耗。由于受缓存的影响（比如下推计算结果缓存），同一个 SQL 在每次执行时消耗的 RU 可能会不同。
 
 ### 其它常见执行信息
 
@@ -303,7 +303,7 @@ Coprocessor 算子通常包含 `cop_task` 和 `tikv_task` 两部分执行时间�
 
 ## 另请参阅
 
-* [Understanding the Query Execution Plan](/explain-overview.md)
+* Understanding the Query Execution Plan
 * [EXPLAIN](/sql-statements/sql-statement-explain.md)
 * [ANALYZE TABLE](/sql-statements/sql-statement-analyze-table.md)
 * [TRACE](/sql-statements/sql-statement-trace.md)

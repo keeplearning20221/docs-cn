@@ -1,6 +1,6 @@
 ---
 title: SET TRANSACTION
-summary: TiDB 数据库中 SET TRANSACTION 的使用概况。
+summary: 平凯数据库中 SET TRANSACTION 的使用概况。
 ---
 
 # SET TRANSACTION
@@ -96,10 +96,10 @@ SHOW SESSION VARIABLES LIKE 'transaction_isolation';
 
 ## MySQL 兼容性
 
-* TiDB 支持仅在语法中将事务设置为只读的功能。
+* 平凯数据库支持仅在语法中将事务设置为只读的功能。
 * 不支持隔离级别 `READ-UNCOMMITTED` 和 `SERIALIZABLE`。
 * 通过快照隔离 (Snapshot Isolation) 技术，实现乐观事务的 `REPEATABLE-READ` 隔离级别，和 MySQL 兼容。
-* 在悲观事务中，TiDB 支持与 MySQL 兼容的 `REPEATABLE-READ` 和 `READ-COMMITTED` 两种隔离级别。具体描述详见 [Isolation Levels](/transaction-isolation-levels.md)。
+* 在悲观事务中，平凯数据库支持与 MySQL 兼容的 `REPEATABLE-READ` 和 `READ-COMMITTED` 两种隔离级别。具体描述详见 [Isolation Levels](/transaction-isolation-levels.md)。
 
 ## 另请参阅
 

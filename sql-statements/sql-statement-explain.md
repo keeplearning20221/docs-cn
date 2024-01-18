@@ -1,6 +1,6 @@
 ---
 title: EXPLAIN
-summary: TiDB 数据库中 EXPLAIN 的使用概况。
+summary: 平凯数据库中 EXPLAIN 的使用概况。
 ---
 
 # EXPLAIN
@@ -39,7 +39,7 @@ ExplainableStmt ::=
 
 > **注意：**
 >
-> 在执行计划返回结果中，自 v6.4.0 版本起，特定算子（即 `IndexJoin` 和 `Apply` 算子的 Probe 端所有子节点）的 `estRows` 字段意义与 v6.4.0 之前的有所不同。细节请参考 [TiDB 执行计划概览](/explain-overview.md#解读-explain-的返回结果)。
+> 在执行计划返回结果中，自 v6.4.0 版本起，特定算子（即 `IndexJoin` 和 `Apply` 算子的 Probe 端所有子节点）的 `estRows` 字段意义与 v6.4.0 之前的有所不同。细节请参考 TiDB 执行计划概览。
 
 目前 TiDB 的 `EXPLAIN` 会输出 5 列，分别是：`id`，`estRows`，`task`，`access object`，`operator info`。执行计划中每个算子都由这 5 列属性来描述，`EXPLAIN` 结果中每一行描述一个算子。每个属性的具体含义如下：
 
@@ -191,7 +191,7 @@ EXPLAIN DELETE FROM t1 WHERE c1=3;
 | FORMAT      | 作用                                                                |
 |-------------|-------------------------------------------------------------------|
 | 未指定         | 未指定 `FORMAT` 时，默认输出格式为 `row`                                                             |
-| `row`       | `EXPLAIN` 语句将以表格格式输出结果。更多信息，可参阅 [TiDB 执行计划概览](/explain-overview.md) |
+| `row`       | `EXPLAIN` 语句将以表格格式输出结果。更多信息，可参阅 TiDB 执行计划概览 |
 | `brief`     | `EXPLAIN` 语句输出结果中的算子 ID 将被简化，较之未指定 `FORMAT` 时输出结果的算子 ID 更为简化      |
 | `dot`       | `EXPLAIN` 语句将输出 DOT 格式的执行计划，可以通过 `dot` 程序（在 `graphviz` 包中）生成 PNG 文件 |
 | `tidb_json` | `EXPLAIN` 语句将输出 JSON 格式的执行计划，算子信息存放在一个 JSON 数组中           |
@@ -223,7 +223,7 @@ EXPLAIN FORMAT = "brief" DELETE FROM t1 WHERE c1=3;
 </div>
 <div label="DotGraph">
 
-除 MySQL 标准结果格式外，TiDB 还支持 DotGraph，需要在 `EXPLAIN` 中指定 `FORMAT = "dot"`，示例如下：
+除 MySQL 标准结果格式外，平凯数据库还支持 DotGraph，需要在 `EXPLAIN` 中指定 `FORMAT = "dot"`，示例如下：
 
 {{< copyable "sql" >}}
 
@@ -334,21 +334,21 @@ EXPLAIN FORMAT = "tidb_json" SELECT id FROM t WHERE a = 1;
 
 ## MySQL 兼容性
 
-* `EXPLAIN` 的格式和 TiDB 中潜在的执行计划都与 MySQL 有很大不同。
+* `EXPLAIN` 的格式和平凯数据库中潜在的执行计划都与 MySQL 有很大不同。
 * TiDB 不支持 `FORMAT=JSON` 或 `FORMAT=TREE` 选项。
 * TiDB 支持的 `FORMAT=tidb_json` 是对当前默认 `EXPLAIN` 格式的 JSON 编码，与 MySQL 的 `FORMAT=JSON` 结果的格式、字段信息都不同。
 
 ## `EXPLAIN FOR CONNECTION`
 
-`EXPLAIN FOR CONNECTION` 用于获得一个连接中当前正在执行 SQL 的执行计划或者是最后执行 SQL 的执行计划，其输出格式与 `EXPLAIN` 完全一致。但 TiDB 中的实现与 MySQL 不同，除了输出格式之外，还有以下区别：
+`EXPLAIN FOR CONNECTION` 用于获得一个连接中当前正在执行 SQL 的执行计划或者是最后执行 SQL 的执行计划，其输出格式与 `EXPLAIN` 完全一致。但平凯数据库中的实现与 MySQL 不同，除了输出格式之外，还有以下区别：
 
-- 如果连接处于睡眠状态，MySQL 返回为空，而 TiDB 返回的是最后执行的查询计划。
-- 如果获取当前会话连接的执行计划，MySQL 会报错，而 TiDB 会正常返回。
-- MySQL 的文档中指出，MySQL 要求登录用户与被查询的连接相同，或者拥有 `PROCESS` 权限，而 TiDB 则要求登录用户与被查询的连接相同，或者拥有 `SUPER` 权限。
+- 如果连接处于睡眠状态，MySQL 返回为空，而平凯数据库返回的是最后执行的查询计划。
+- 如果获取当前会话连接的执行计划，MySQL 会报错，而平凯数据库会正常返回。
+- MySQL 的文档中指出，MySQL 要求登录用户与被查询的连接相同，或者拥有 `PROCESS` 权限，而平凯数据库则要求登录用户与被查询的连接相同，或者拥有 `SUPER` 权限。
 
 ## 另请参阅
 
-* [理解 TiDB 执行计划](/explain-overview.md)
+* 理解 TiDB 执行计划
 * [EXPLAIN ANALYZE](/sql-statements/sql-statement-explain-analyze.md)
 * [ANALYZE TABLE](/sql-statements/sql-statement-analyze-table.md)
 * [TRACE](/sql-statements/sql-statement-trace.md)

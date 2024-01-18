@@ -1,11 +1,11 @@
 ---
 title: FLUSH TABLES
-summary: TiDB 数据库中 FLUSH TABLES 的使用概况。
+summary: 平凯数据库中 FLUSH TABLES 的使用概况。
 ---
 
 # FLUSH TABLES
 
-`FLUSH TABLES` 语句用于提供 MySQL 兼容性，但在 TiDB 中并无有效用途。
+`FLUSH TABLES` 语句用于提供 MySQL 兼容性，但在平凯数据库中并无有效用途。
 
 ## 语法图
 
@@ -62,8 +62,8 @@ ERROR 1105 (HY000): FLUSH TABLES WITH READ LOCK is not supported.  Please use @@
 
 ## MySQL 兼容性
 
-* TiDB 没有 MySQL 中的表缓存这一概念。所以，`FLUSH TABLES` 因 MySQL 兼容性会在 TiDB 中解析出但会被忽略掉。
-* 因为 TiDB 目前不支持锁表，所以`FLUSH TABLES WITH READ LOCK` 语句会产生错误。建议使用 [Historical reads](/read-historical-data.md) 来实现锁表。
+* 平凯数据库没有 MySQL 中的表缓存这一概念。所以，`FLUSH TABLES` 因 MySQL 兼容性会在平凯数据库中解析出但会被忽略掉。
+* 因为平凯数据库目前不支持锁表，所以`FLUSH TABLES WITH READ LOCK` 语句会产生错误。建议使用 [Historical reads](/read-historical-data.md) 来实现锁表。
 
 ## 另请参阅
 

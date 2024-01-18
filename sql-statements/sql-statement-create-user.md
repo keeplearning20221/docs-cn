@@ -1,11 +1,11 @@
 ---
 title: CREATE USER
-summary: TiDB 数据库中 CREATE USER 的使用概况。
+summary: 平凯数据库中 CREATE USER 的使用概况。
 ---
 
 # CREATE USER
 
-`CREATE USER` 语句用于创建带有指定密码的新用户。和 MySQL 一样，在 TiDB 权限系统中，用户是用户名和用户名所连接主机的组合。因此，可创建一个用户 `'newuser2'@'192.168.1.1'`，使其只能通过 IP 地址 `192.168.1.1` 进行连接。相同的用户名从不同主机登录时可能会拥有不同的权限。
+`CREATE USER` 语句用于创建带有指定密码的新用户。和 MySQL 一样，在平凯数据库权限系统中，用户是用户名和用户名所连接主机的组合。因此，可创建一个用户 `'newuser2'@'192.168.1.1'`，使其只能通过 IP 地址 `192.168.1.1` 进行连接。相同的用户名从不同主机登录时可能会拥有不同的权限。
 
 ## 语法图
 
@@ -170,9 +170,10 @@ SELECT USER, HOST, USER_ATTRIBUTES FROM MYSQL.USER WHERE USER='newuser7';
 
 ## MySQL 兼容性
 
-* TiDB 不支持 `WITH MAX_QUERIES_PER_HOUR`、`WITH MAX_UPDATES_PER_HOUR`、`WITH MAX_USER_CONNECTIONS` 等 `CREATE` 选项。
-* TiDB 不支持 `DEFAULT ROLE` 选项。
-* 对于 TiDB 尚不支持的 `CREATE` 选项。这些选项可被解析，但会被忽略。
+* 平凯数据库不支持 `WITH MAX_QUERIES_PER_HOUR`、`WITH MAX_UPDATES_PER_HOUR`、`WITH MAX_USER_CONNECTIONS` 等 `CREATE` 选项。
+* 平凯数据库不支持 `DEFAULT ROLE` 选项。
+* 平凯数据库不支持 `PASSWORD EXPIRE`、`PASSWORD HISTORY` 等有关密码限制的 `CREATE` 选项。
+* 对于平凯数据库尚不支持的 `CREATE` 选项。这些选项可被解析，但会被忽略。
 
 ## 另请参阅
 

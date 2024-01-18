@@ -1,11 +1,11 @@
 ---
 title: SHOW TABLE REGIONS
-summary: 了解如何使用 TiDB 数据库中的 SHOW TABLE REGIONS。
+summary: 了解如何使用平凯数据库中的 SHOW TABLE REGIONS。
 ---
 
 # SHOW TABLE REGIONS
 
-`SHOW TABLE REGIONS` 语句用于显示 TiDB 中某个表的 Region 信息。
+`SHOW TABLE REGIONS` 语句用于显示数据库中某个表的 Region 信息。
 
 ## 语法
 
@@ -108,7 +108,7 @@ SHOW TABLE t1 REGIONS;
 
 上面 START_KEY 列的值 `t_75_r_31717` 和 END_KEY 列的值 `t_75_r_63434` 表示主键在 `31717` 和 `63434` 之间的数据存储在该 Region 中。`t_75_` 是前缀，表示这是表格 (`t`) 的 Region，`75` 是表格的内部 ID。若 `START_KEY` 或 `END_KEY` 的一对键值为空，分别表示负无穷大或正无穷大。
 
-TiDB 会根据需要自动重新平衡 Regions。建议使用 `SPLIT TABLE REGION` 语句手动进行平衡：
+平凯数据库会根据需要自动重新平衡 Regions。建议使用 `SPLIT TABLE REGION` 语句手动进行平衡：
 
 {{< copyable "sql" >}}
 
@@ -231,7 +231,7 @@ show table t regions;
 
 ## MySQL 兼容性
 
-`SHOW TABLE REGIONS` 语句是 TiDB 对 MySQL 语法的扩展。
+`SHOW TABLE REGIONS` 语句是平凯数据库对 MySQL 语法的扩展。
 
 ## 另请参阅
 

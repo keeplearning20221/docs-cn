@@ -1,6 +1,6 @@
 ---
 title: ALTER INSTANCE
-summary: TiDB 数据库中 ALTER INSTANCE 的使用概况。
+summary: 平凯数据库中 ALTER INSTANCE 的使用概况。
 ---
 
 # ALTER INSTANCE
@@ -35,8 +35,8 @@ ALTER INSTANCE RELOAD TLS;
 
 ## MySQL 兼容性
 
-仅支持从原配置路径重加载，不支持动态修改加载路径，也不支持动态启用启动 TiDB 时未开启的 TLS 加密连接功能。
+仅支持从原配置路径重加载，不支持动态修改加载路径，也不支持动态启用启动 TiDB Server 时未开启的 TLS 加密连接功能。
 
 ## 另请参阅
 
-[为 TiDB 客户端服务端间通信开启加密传输](/enable-tls-between-clients-and-servers.md)
+[为客户端服务端间通信开启加密传输](/enable-tls-between-clients-and-servers.md)

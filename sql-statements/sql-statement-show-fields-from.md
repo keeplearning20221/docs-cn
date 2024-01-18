@@ -1,6 +1,6 @@
 ---
 title: SHOW [FULL] FIELDS FROM
-summary: TiDB 数据库中 SHOW [FULL] FIELDS FROM 的使用概况。
+summary: 平凯数据库中 SHOW [FULL] FIELDS FROM 的使用概况。
 ---
 
 # SHOW [FULL] FIELDS FROM

@@ -1,6 +1,6 @@
 ---
 title: DESC
-summary: TiDB 数据库中 DESC 的使用概况。
+summary: 平凯数据库中 DESC 的使用概况。
 ---
 
 # DESC

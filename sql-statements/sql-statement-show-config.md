@@ -1,11 +1,11 @@
 ---
 title: SHOW CONFIG
-summary: TiDB 数据库中 SHOW CONFIG 的使用概况。
+summary: 平凯数据库中 SHOW CONFIG 的使用概况。
 ---
 
 # SHOW CONFIG
 
-`SHOW CONFIG` 语句用于展示 TiDB 各个组件当前正在应用的配置，请注意，配置与系统变量作用于不同维度，请不要混淆，如果希望获取系统变量信息，请使用 [SHOW VARIABLES](/sql-statements/sql-statement-show-variables.md) 语法。
+`SHOW CONFIG` 语句用于展示平凯数据库各个组件当前正在应用的配置，请注意，配置与系统变量作用于不同维度，请不要混淆，如果希望获取系统变量信息，请使用 [SHOW VARIABLES](/sql-statements/sql-statement-show-variables.md) 语法。
 
 ## 语法图
 
@@ -76,7 +76,7 @@ SHOW CONFIG LIKE 'tidb';
 
 ## MySQL 兼容性
 
-该语句是 TiDB 对 MySQL 语法的扩展。
+该语句是平凯数据库对 MySQL 语法的扩展。
 
 ## 另请参阅
 

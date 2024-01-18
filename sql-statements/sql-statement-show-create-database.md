@@ -1,6 +1,6 @@
 ---
 title: SHOW CREATE DATABASE
-summary: TiDB 数据库中 SHOW CREATE DATABASE 的使用概况。
+summary: 平凯数据库中 SHOW CREATE DATABASE 的使用概况。
 ---
 
 # SHOW CREATE DATABASE
@@ -60,7 +60,7 @@ SHOW CREATE SCHEMA IF NOT EXISTS test;
 
 ## MySQL 兼容性
 
-`SHOW CREATE DATABASE` 语句与 MySQL 完全兼容。如发现任何兼容性差异，请尝试 [TiDB 支持资源](/support.md)。
+`SHOW CREATE DATABASE` 语句与 MySQL 完全兼容。如发现任何兼容性差异，请在 GitHub 上提交 [issue](https://github.com/pingcap/tidb/issues/new/choose)。
 
 ## 另请参阅
 

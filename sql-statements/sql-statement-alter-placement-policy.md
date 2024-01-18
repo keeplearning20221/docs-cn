@@ -1,6 +1,6 @@
 ---
 title: ALTER PLACEMENT POLICY
-summary: TiDB 数据库中 ALTER PLACEMENT POLICY 的使用概况。
+summary: 平凯数据库中 ALTER PLACEMENT POLICY 的使用概况。
 ---
 
 # ALTER PLACEMENT POLICY
@@ -77,7 +77,7 @@ Create Policy | CREATE PLACEMENT POLICY `p1` PRIMARY_REGION="us-east-1" REGIONS=
 
 ## MySQL 兼容性
 
-该语句是 TiDB 对 MySQL 语法的扩展。
+该语句是平凯数据库对 MySQL 语法的扩展。
 
 ## 另请参阅
 

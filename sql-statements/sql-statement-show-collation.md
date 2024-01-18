@@ -1,6 +1,6 @@
 ---
 title: SHOW COLLATION
-summary: TiDB 数据库中 SHOW COLLATION 的使用概况。
+summary: 平凯数据库中 SHOW COLLATION 的使用概况。
 ---
 
 # SHOW COLLATION
@@ -9,7 +9,7 @@ summary: TiDB 数据库中 SHOW COLLATION 的使用概况。
 
 > **注意：**
 >
-> `SHOW COLLATION` 所展示的排序规则列表与 TiDB 集群是否开启[新排序规则框架](/character-set-and-collation.md#新框架下的排序规则支持)有关，详情请见 [TiDB 字符集和排序规则](/character-set-and-collation.md)。
+> `SHOW COLLATION` 所展示的排序规则列表与平凯数据库集群是否开启[新排序规则框架](/character-set-and-collation.md#新框架下的排序规则支持)有关，详情请见 [平凯数据库字符集和排序规则](/character-set-and-collation.md)。
 
 ## 语法图
 
@@ -71,7 +71,7 @@ SHOW COLLATION;
 
 ## MySQL 兼容性
 
-`SHOW COLLATION` 语句功能与 MySQL 完全兼容。注意，TiDB 中字符集的默认排序规则与 MySQL 有所不同，具体可参考[与 MySQL 兼容性对比](/mysql-compatibility.md#默认设置)。如发现任何其他兼容性差异，请尝试 [TiDB 支持资源](/support.md)。
+`SHOW COLLATION` 语句功能与 MySQL 完全兼容。注意，平凯数据库中字符集的默认排序规则与 MySQL 有所不同，具体可参考[与 MySQL 兼容性对比](/mysql-compatibility.md#默认设置)。如发现任何其他兼容性差异，请在 GitHub 上提交 [issue](https://github.com/pingcap/tidb/issues/new/choose)。
 
 ## 另请参阅
 

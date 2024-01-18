@@ -1,11 +1,11 @@
 ---
 title: CREATE VIEW
-summary: TiDB 数据库中 CREATE VIEW 的使用概况。
+summary: 平凯数据库中 CREATE VIEW 的使用概况。
 ---
 
 # CREATE VIEW
 
-使用 `CREATE VIEW` 语句将 `SELECT` 语句保存为类似于表的可查询对象。TiDB 中的视图是非物化的，这意味着在查询视图时，TiDB 将在内部重写查询，以将视图定义与 SQL 查询结合起来。
+使用 `CREATE VIEW` 语句将 `SELECT` 语句保存为类似于表的可查询对象。平凯数据库中的视图是非物化的，这意味着在查询视图时，平凯数据库将在内部重写查询，以将视图定义与 SQL 查询结合起来。
 
 ## 语法图
 
@@ -143,9 +143,9 @@ ERROR 1105 (HY000): insert into view v1 is not supported now.
 
 ## MySQL 兼容性
 
-* 目前 TiDB 中的任何视图都不可被插入，也不可被更新（即不支持 INSERT VIEW，也不支持 UPDATE VIEW）。`WITH CHECK OPTION` 只做了语法兼容但不生效。
-* 目前 TiDB 中的视图不支持 `ALTER VIEW`，但可以使用 `CREATE OR REPLACE` 替代。
-* 目前 `ALGORITHM` 字段在 TiDB 中只做了语法兼容但不生效，TiDB 目前只支持 MERGE 算法。
+* 目前平凯数据库中的任何视图都不可被插入，也不可被更新（即不支持 INSERT VIEW，也不支持 UPDATE VIEW）。`WITH CHECK OPTION` 只做了语法兼容但不生效。
+* 目前平凯数据库中的视图不支持 `ALTER VIEW`，但可以使用 `CREATE OR REPLACE` 替代。
+* 目前 `ALGORITHM` 字段在数据库中只做了语法兼容但不生效，目前只支持 MERGE 算法。
 
 ## 另请参阅
 

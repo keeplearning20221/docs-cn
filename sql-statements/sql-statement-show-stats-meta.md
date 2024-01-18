@@ -1,6 +1,6 @@
 ---
 title: SHOW STATS_META
-summary: TiDB 数据库中 SHOW STATS_META 语句的简单说明。
+summary: 平凯数据库中 SHOW STATS_META 语句的简单说明。
 ---
 
 # SHOW STATS_META
@@ -20,7 +20,7 @@ summary: TiDB 数据库中 SHOW STATS_META 语句的简单说明。
 
 > **注意：**
 >
-> 在 TiDB 根据 DML 语句自动更新总行数以及修改的行数时，`update_time` 也会被更新，因此并不能认为 `update_time` 是最近一次发生 Analyze 的时间。
+> 在 TiDB Server 根据 DML 语句自动更新总行数以及修改的行数时，`update_time` 也会被更新，因此并不能认为 `update_time` 是最近一次发生 Analyze 的时间。
 
 ## 语法图
 
@@ -74,9 +74,9 @@ show stats_meta where table_name = 't2';
 
 ## MySQL 兼容性
 
-该语句是 TiDB 对 MySQL 语法的扩展。
+该语句是平凯数据库对 MySQL 语法的扩展。
 
 ## 另请参阅
 
 * [ANALYZE](/sql-statements/sql-statement-analyze-table.md)
-* [统计信息介绍](/statistics.md)
+* 统计信息介绍

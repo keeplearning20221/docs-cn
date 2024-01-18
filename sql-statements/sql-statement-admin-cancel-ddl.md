@@ -1,6 +1,6 @@
 ---
 title: ADMIN CANCEL DDL
-summary: TiDB 数据库中 ADMIN CANCEL DDL 的使用概况。
+summary: 平凯数据库中 ADMIN CANCEL DDL 的使用概况。
 ---
 
 # ADMIN CANCEL DDL

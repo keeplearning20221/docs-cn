@@ -1,11 +1,11 @@
 ---
 title: SET PASSWORD
-summary: TiDB 数据库中 SET PASSWORD 的使用概况。
+summary: 平凯数据库中 SET PASSWORD 的使用概况。
 ---
 
 # SET PASSWORD
 
-`SET PASSWORD` 语句用于更改 TiDB 系统数据库中的用户密码。
+`SET PASSWORD` 语句用于更改平凯数据库系统数据库中的用户密码。
 
 ## 语法图
 
@@ -104,7 +104,7 @@ SHOW CREATE USER 'newuser';
 
 ## MySQL 兼容性
 
-`SET PASSWORD` 语句与 MySQL 完全兼容。如发现任何兼容性差异，请尝试 [TiDB 支持资源](/support.md)。
+`SET PASSWORD` 语句与 MySQL 完全兼容。如发现任何兼容性差异，请在 GitHub 上提交 [issue](https://github.com/pingcap/tidb/issues/new/choose)。
 
 ## 另请参阅
 

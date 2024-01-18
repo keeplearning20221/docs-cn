@@ -1,6 +1,6 @@
 ---
 title: DROP TABLE
-summary: TiDB 数据库中 DROP TABLE 的使用概况。
+summary: 平凯数据库中 DROP TABLE 的使用概况。
 ---
 
 # DROP TABLE

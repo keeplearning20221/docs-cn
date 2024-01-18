@@ -1,6 +1,6 @@
 ---
 title: SHOW CREATE RESOURCE GROUP
-summary: TiDB 数据库中 SHOW CREATE RESOURCE GROUP 的使用概况。
+summary: 平凯数据库中 SHOW CREATE RESOURCE GROUP 的使用概况。
 ---
 
 # SHOW CREATE RESOURCE GROUP
@@ -39,11 +39,11 @@ SHOW CREATE RESOURCE GROUP rg1;
 
 ## MySQL 兼容性
 
-该语句是 TiDB 对 MySQL 语法的扩展。
+该语句是平凯数据库对 MySQL 语法的扩展。
 
 ## 另请参阅
 
-* [TiDB RESOURCE CONTROL](/tidb-resource-control.md)
+* TiDB RESOURCE CONTROL
 * [CREATE RESOURCE GROUP](/sql-statements/sql-statement-alter-resource-group.md)
 * [ALTER RESOURCE GROUP](/sql-statements/sql-statement-alter-resource-group.md)
 * [DROP RESOURCE GROUP](/sql-statements/sql-statement-drop-resource-group.md)

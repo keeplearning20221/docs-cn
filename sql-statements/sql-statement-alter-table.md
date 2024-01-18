@@ -1,6 +1,6 @@
 ---
 title: ALTER TABLE
-summary: TiDB 数据库中 ALTER TABLE 的使用概况。
+summary: 平凯数据库中 ALTER TABLE 的使用概况。
 ---
 
 # ALTER TABLE
@@ -117,7 +117,7 @@ Query OK, 0 rows affected (0.30 sec)
 2 rows in set (0.00 sec)
 ```
 
-TiDB 允许用户为 DDL 操作指定使用某一种 `ALTER` 算法。这仅为一种指定，并不改变实际的用于更改表的算法。如果你只想在群集的高峰时段允许即时 DDL 更改，则 `ALTER` 算法会很有用。示例如下：
+平凯数据库允许用户为 DDL 操作指定使用某一种 `ALTER` 算法。这仅为一种指定，并不改变实际的用于更改表的算法。如果你只想在群集的高峰时段允许即时 DDL 更改，则 `ALTER` 算法会很有用。示例如下：
 
 {{< copyable "sql" >}}
 
@@ -141,7 +141,7 @@ ALTER TABLE t1 ADD INDEX (c1), ALGORITHM=INSTANT;
 ERROR 1846 (0A000): ALGORITHM=INSTANT is not supported. Reason: Cannot alter table by INSTANT. Try ALGORITHM=INPLACE.
 ```
 
-但如果为 `INPLACE` 操作指定 `ALGORITHM=COPY`，会产生警告而非错误，这是因为 TiDB 将该指定解读为*该算法或更好的算法*。由于 TiDB 使用的算法可能不同于 MySQL，所以这一行为可用于 MySQL 兼容性。
+但如果为 `INPLACE` 操作指定 `ALGORITHM=COPY`，会产生警告而非错误，这是因为平凯数据库将该指定解读为*该算法或更好的算法*。由于平凯数据库使用的算法可能不同于 MySQL，所以这一行为可用于 MySQL 兼容性。
 
 {{< copyable "sql" >}}
 
@@ -162,12 +162,12 @@ Query OK, 0 rows affected, 1 warning (0.25 sec)
 
 ## MySQL 兼容性
 
-TiDB 中的 `ALTER TABLE` 语法主要存在以下限制：
+平凯数据库中的 `ALTER TABLE` 语法主要存在以下限制：
 
 - 使用 `ALTER TABLE` 语句修改一个表的多个模式对象（如列、索引）时：
     - 不允许在多个更改中指定同一个模式对象。
-    - TiDB 根据**执行前**的表结构检查合法性。例如 `ALTER TABLE t ADD COLUMN c1 INT, ADD COLUMN c2 INT AFTER c1;` 会报错，因为表结构中不存在名字为 `c1` 的列。
-    - TiDB 的执行顺序是从左往右逐个执行更改，该行为在个别场景下和 MySQL 不兼容。
+    - 平凯数据库根据**执行前**的表结构检查合法性。例如 `ALTER TABLE t ADD COLUMN c1 INT, ADD COLUMN c2 INT AFTER c1;` 会报错，因为表结构中不存在名字为 `c1` 的表。
+    - 平凯数据库执行顺序是从左往右逐个执行更改，该行为在个别场景下和 MySQL 不兼容。
 - 不支持主键列上 [Reorg-Data](/sql-statements/sql-statement-modify-column.md#reorg-data-change) 类型的变更。
 - 不支持分区表上的列类型变更。
 - 不支持生成列上的列类型变更。
@@ -175,7 +175,7 @@ TiDB 中的 `ALTER TABLE` 语法主要存在以下限制：
 - 不支持空间数据类型。
 - `ALTER TABLE t CACHE | NOCACHE` 不是 MySQL 标准语法，而是 TiDB 扩展功能，参见[缓存表](/cached-tables.md)。
 
-其它限制可参考：[TiDB 中 DDL 语句与 MySQL 的兼容性情况](/mysql-compatibility.md#ddl-的限制)。
+其它限制可参考：[平凯数据库 中 DDL 语句与 MySQL 的兼容性情况](/mysql-compatibility.md#ddl-的限制)。
 
 ## 另请参阅
 

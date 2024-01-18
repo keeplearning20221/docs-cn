@@ -1,6 +1,6 @@
 ---
 title: LOCK TABLES 和 UNLOCK TABLES
-summary: TiDB 数据库中 LOCK TABLES 和 UNLOCK TABLES 的使用概况。
+summary: 平凯数据库中 LOCK TABLES 和 UNLOCK TABLES 的使用概况。
 ---
 
 # LOCK TABLES 和 UNLOCK TABLES
@@ -104,4 +104,4 @@ ERROR 1066 (42000): Not unique table/alias: 't'
 
 ### 释放表锁
 
-在 TiDB 的会话中显示开启一个事务时（例如使用 `BEGIN` 语句），TiDB 不会隐式释放当前会话已经持有的表锁；但 MySQL 会隐式释放当前会话已经持有的表锁。
+在 TiDB Server 的会话中显示开启一个事务时（例如使用 `BEGIN` 语句），TiDB Server 不会隐式释放当前会话已经持有的表锁；但 MySQL 会隐式释放当前会话已经持有的表锁。

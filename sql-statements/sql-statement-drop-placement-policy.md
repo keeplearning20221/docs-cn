@@ -1,6 +1,6 @@
 ---
 title: DROP PLACEMENT POLICY
-summary: TiDB 数据库中 ALTER PLACEMENT POLICY 的使用概况。
+summary: 平凯数据库中 ALTER PLACEMENT POLICY 的使用概况。
 ---
 
 # DROP PLACEMENT POLICY
@@ -59,7 +59,7 @@ Query OK, 0 rows affected (0.21 sec)
 
 ## MySQL 兼容性
 
-该语句是 TiDB 对 MySQL 语法的扩展。
+该语句是平凯数据库对 MySQL 语法的扩展。
 
 ## 另请参阅
 

@@ -1,6 +1,6 @@
 ---
 title: ALTER RESOURCE GROUP
-summary: TiDB 数据库中 ALTER RESOURCE GROUP 的使用概况。
+summary: 平凯数据库中 ALTER RESOURCE GROUP 的使用概况。
 ---
 
 # ALTER RESOURCE GROUP
@@ -35,7 +35,7 @@ ResourceGroupPriorityOption ::=
 |   HIGH
 ```
 
-TiDB 支持以下 `DirectResourceGroupOption`, 其中 [Request Unit (RU)](/tidb-resource-control.md#什么是-request-unit-ru) 是 TiDB 对 CPU、IO 等系统资源统一抽象的单位。
+平凯数据库支持以下 `DirectResourceGroupOption`, 其中 [Request Unit (RU)](/tidb-resource-control.md#什么是-request-unit-ru) 是 TiDB 对 CPU、IO 等系统资源统一抽象的单位。
 
 | 参数            | 含义           | 举例                                   |
 |---------------|--------------|--------------------------------------|
@@ -107,10 +107,10 @@ SELECT * FROM information_schema.resource_groups WHERE NAME ='rg1';
 
 ## MySQL 兼容性
 
-MySQL 也支持 [ALTER RESOURCE GROUP](https://dev.mysql.com/doc/refman/8.0/en/alter-resource-group.html)，但是接受的参数和 TiDB 不同，两者并不兼容。
+MySQL 也支持 [ALTER RESOURCE GROUP](https://dev.mysql.com/doc/refman/8.0/en/alter-resource-group.html)，但是接受的参数和平凯数据库不同，两者并不兼容。
 
 ## 另请参阅
 
 * [DROP RESOURCE GROUP](/sql-statements/sql-statement-drop-resource-group.md)
 * [CREATE RESOURCE GROUP](/sql-statements/sql-statement-create-resource-group.md)
-* [RU](/tidb-resource-control.md#什么是-request-unit-ru)
+* RU

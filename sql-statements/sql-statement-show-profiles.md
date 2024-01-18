@@ -1,6 +1,6 @@
 ---
 title: SHOW PROFILES
-summary: TiDB 数据库中 SHOW PROFILES 的使用概况。
+summary: 平凯数据库中 SHOW PROFILES 的使用概况。
 ---
 
 # SHOW PROFILES

@@ -1,13 +1,13 @@
 ---
 title: MODIFY COLUMN
-summary: TiDB 数据库中 MODIFY COLUMN 的使用概况。
+summary: 平凯数据库中 MODIFY COLUMN 的使用概况。
 ---
 
 # MODIFY COLUMN
 
 `ALTER TABLE .. MODIFY COLUMN` 语句用于修改已有表上的列，包括列的数据类型和属性。若要同时重命名，可改用 [`CHANGE COLUMN`](/sql-statements/sql-statement-change-column.md) 语句。
 
-从 v5.1.0 版本起，TiDB 开始支持 Reorg 类型变更，包括但不限于：
+从 v5.1.0 版本起，平凯数据库开始支持 Reorg 类型变更，包括但不限于：
 
 - 从 `VARCHAR` 转换为 `BIGINT`
 - `DECIMAL` 精度修改
@@ -153,7 +153,7 @@ CREATE TABLE `t1` (
 
 **注意：**
 
-> - 当所变更的类型与已经存在的数据行产生冲突时，TiDB 会进行报错处理。在上述例子中，TiDB 将进行如下报错：
+> - 当所变更的类型与已经存在的数据行产生冲突时，TiDB Server 会进行报错处理。在上述例子中，TiDB Server 将进行如下报错：
 >
 >   ```
 >   alter table t1 modify column col1 varchar(4);

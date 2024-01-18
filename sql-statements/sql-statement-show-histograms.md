@@ -1,6 +1,6 @@
 ---
 title: SHOW STATS_HISTOGRAMS
-summary: TiDB 数据库中 SHOW HISTOGRAMS 语句的简单说明。
+summary: 平凯数据库中 SHOW HISTOGRAMS 语句的简单说明。
 ---
 
 # SHOW STATS_HISTOGRAMS
@@ -58,9 +58,9 @@ show stats_histograms where table_name = 't2';
 
 ## MySQL 兼容性
 
-该语句是 TiDB 对 MySQL 语法的扩展。
+该语句是平凯数据库对 MySQL 语法的扩展。
 
 ## 另请参阅
 
 * [ANALYZE](/sql-statements/sql-statement-analyze-table.md)
-* [统计信息介绍](/statistics.md)
+* 统计信息介绍

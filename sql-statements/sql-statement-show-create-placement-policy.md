@@ -1,11 +1,11 @@
 ---
 title: SHOW CREATE PLACEMENT POLICY
-summary: TiDB 数据库中 SHOW CREATE PLACEMENT POLICY 的使用概况。
+summary: 平凯数据库中 SHOW CREATE PLACEMENT POLICY 的使用概况。
 ---
 
 # SHOW CREATE PLACEMENT POLICY
 
-`SHOW CREATE PLACEMENT POLICY` 语句可用于查看放置策略当前的定义，并在另一个 TiDB 集群中重新创建该策略。
+`SHOW CREATE PLACEMENT POLICY` 语句可用于查看放置策略当前的定义，并在另一个平凯数据库集群中重新创建该策略。
 
 ## 语法图
 
@@ -40,7 +40,7 @@ Create Policy | CREATE PLACEMENT POLICY `p1` PRIMARY_REGION="us-east-1" REGIONS=
 
 ## MySQL 兼容性
 
-该语句是 TiDB 对 MySQL 语法的扩展。
+该语句是平凯数据库对 MySQL 语法的扩展。
 
 ## 另请参阅
 

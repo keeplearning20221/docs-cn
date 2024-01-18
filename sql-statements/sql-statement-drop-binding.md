@@ -1,6 +1,6 @@
 ---
 title: DROP [GLOBAL|SESSION] BINDING
-summary: TiDB 数据库中 DROP [GLOBAL|SESSION] BINDING 的使用概况。
+summary: 平凯数据库中 DROP [GLOBAL|SESSION] BINDING 的使用概况。
 ---
 
 # DROP [GLOBAL|SESSION] BINDING
@@ -195,12 +195,12 @@ No query specified
 
 ## MySQL 兼容性
 
-`DROP [GLOBAL|SESSION] BINDING` 语句是 TiDB 对 MySQL 语法的扩展。
+`DROP [GLOBAL|SESSION] BINDING` 语句是平凯数据库对 MySQL 语法的扩展。
 
 ## 另请参阅
 
 * [CREATE [GLOBAL|SESSION] BINDING](/sql-statements/sql-statement-create-binding.md)
 * [SHOW [GLOBAL|SESSION] BINDINGS](/sql-statements/sql-statement-show-bindings.md)
 * [ANALYZE](/sql-statements/sql-statement-analyze-table.md)
-* [Optimizer Hints](/optimizer-hints.md)
+* Optimizer Hints
 * [执行计划管理 (SPM)](/sql-plan-management.md)

@@ -4,13 +4,12 @@ title: ADMIN
 
 # ADMIN
 
-`ADMIN` 语句是 TiDB 扩展语法，用于查看 TiDB 自身的状态，并对 TiDB 中的表数据进行校验。本文介绍了下列与 ADMIN 相关的扩展语句：
+`ADMIN` 语句是平凯数据库扩展语法，用于查看数据库自身的状态，并对数据库中的表数据进行校验。本文介绍了下列与 ADMIN 相关的扩展语句：
 
 - [`ADMIN RELOAD`](#admin-reload-语句)
 - [`ADMIN PLUGIN`](#admin-plugin-语句)
 - [`ADMIN ... BINDINGS`](#admin--bindings-语句)
 - [`ADMIN REPAIR TABLE`](#admin-repair-table-语句)
-- [`ADMIN SHOW NEXT_ROW_ID`](#admin-show-next_row_id-语句)
 - [`ADMIN SHOW SLOW`](#admin-show-slow-语句)
 
 ## ADMIN 与 DDL 相关的扩展语句
@@ -83,7 +82,7 @@ ADMIN CAPTURE bindings;
 ADMIN EVOLVE bindings;
 ```
 
-开启自动绑定功能后，每隔 `bind-info-lease`（默认值为 `3s`）触发一次 SQL Plan 绑定信息的演进。以上语句用于主动触发此演进，SQL Plan 绑定详情可参考：[执行计划管理](/sql-plan-management.md)。
+开启自动绑定功能后，每隔 `bind-info-lease`（默认值为 `3s`）触发一次 SQL Plan 绑定信息的演进。以上语句用于主动触发此演进，SQL Plan 绑定详情可参考：执行计划管理。
 
 {{< copyable "sql" >}}
 
@@ -103,14 +102,6 @@ ADMIN REPAIR TABLE tbl_name CREATE TABLE STATEMENT;
 
 `ADMIN REPAIR TABLE tbl_name CREATE TABLE STATEMENT` 用于在极端情况下，对存储层中的表的元信息进行非可信的覆盖。“非可信”是指需要人为保证原表的元信息可以完全由 `CREATE TABLE STATEMENT` 提供。该语句需要打开配置文件项中的 [`repair-mode`](/tidb-configuration-file.md#repair-mode) 开关，并且需要确保所修复的表名在 [`repair-table-list`](/tidb-configuration-file.md#repair-table-list) 名单中。
 
-## `ADMIN SHOW NEXT_ROW_ID` 语句
-
-```sql
-ADMIN SHOW t NEXT_ROW_ID;
-```
-
-以上语句可以查看表中某些特殊列的详情。输出结果与 [SHOW TABLE NEXT_ROW_ID](/sql-statements/sql-statement-show-table-next-rowid.md) 相同。
-
 ## `ADMIN SHOW SLOW` 语句
 
 {{< copyable "sql" >}}
@@ -125,7 +116,7 @@ ADMIN SHOW SLOW RECENT N;
 ADMIN SHOW SLOW TOP [INTERNAL | ALL] N;
 ```
 
-这两种语句的具体操作详情可参考：[admin show slow 语句](/identify-slow-queries.md#admin-show-slow-命令)。
+这两种语句的具体操作详情可参考：admin show slow 语句。
 
 ## 语句概览
 
@@ -183,22 +174,6 @@ ADMIN SHOW DDL JOBS 5;
 +--------+---------+------------+---------------------+----------------+-----------+----------+-----------+-----------------------------------+-----------------------------------+---------------+
 ```
 
-执行以下命令，查看表中某些特殊列的详情。输出结果与 [SHOW TABLE NEXT_ROW_ID](/sql-statements/sql-statement-show-table-next-rowid.md) 相同。
-
-```sql
-ADMIN SHOW t NEXT_ROW_ID;
-```
-
-```sql
-+---------+------------+-------------+--------------------+----------------+
-| DB_NAME | TABLE_NAME | COLUMN_NAME | NEXT_GLOBAL_ROW_ID | ID_TYPE        |
-+---------+------------+-------------+--------------------+----------------+
-| test    | t          | _tidb_rowid |                101 | _TIDB_ROWID    |
-| test    | t          | _tidb_rowid |                  1 | AUTO_INCREMENT |
-+---------+------------+-------------+--------------------+----------------+
-2 rows in set (0.01 sec)
-```
-
 执行以下命令，可查看 test 数据库中未执行完成的 DDL 任务，包括正在执行中以及最近 5 条已经执行完但是执行失败的 DDL 任务。
 
 {{< copyable "sql" >}}
@@ -239,4 +214,4 @@ ADMIN SHOW DDL JOBS 5 WHERE state != 'synced' AND db_name = 'test';
 
 ## MySQL 兼容性
 
-`ADMIN` 语句是 TiDB 对于 MySQL 语法的扩展。
+`ADMIN` 语句是平凯数据库对于 MySQL 语法的扩展。

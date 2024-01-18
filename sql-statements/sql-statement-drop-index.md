@@ -1,6 +1,6 @@
 ---
 title: DROP INDEX
-summary: TiDB 数据库中 DROP INDEX 的使用概况。
+summary: 平凯数据库中 DROP INDEX 的使用概况。
 ---
 
 # DROP INDEX

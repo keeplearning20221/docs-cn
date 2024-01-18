@@ -1,6 +1,6 @@
 ---
 title：ADMIN SHOW TELEMETRY
-summary：TiDB 数据库中 ADMIN SHOW TELEMETRY 的使用概况。
+summary：平凯数据库中 ADMIN SHOW TELEMETRY 的使用概况。
 ---
 
 # ADMIN SHOW TELEMETRY
@@ -423,7 +423,7 @@ DATA_PREVIEW: {
 
 ## MySQL 兼容性
 
-`ADMIN` 语句是 TiDB 对 MySQL 语法的扩展。
+`ADMIN` 语句是平凯数据库对 MySQL 语法的扩展。
 
 ## 另请参阅
 

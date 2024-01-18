@@ -1,6 +1,6 @@
 ---
 title: REVOKE <privileges>
-summary: TiDB 数据库中 REVOKE <privileges> 的使用概况。
+summary: 平凯数据库中 REVOKE <privileges> 的使用概况。
 ---
 
 # `REVOKE <privileges>`
@@ -141,7 +141,7 @@ ERROR 1141 (42000): There is no such grant defined for user 'newuser' on host '%
 
 ## MySQL 兼容性
 
-`REVOKE <privileges>` 语句执行成功后，在 TiDB 中语句执行的结果会在当前连接立即生效，而 [MySQL 中部分权限的结果需要等到之后的连接才生效](https://dev.mysql.com/doc/refman/8.0/en/privilege-changes.html)。见 [TiDB #39356](https://github.com/pingcap/tidb/issues/39356)。
+`REVOKE <privileges>` 语句执行成功后，在平凯数据库中语句执行的结果会在当前连接立即生效，而 [MySQL 中部分权限的结果需要等到之后的连接才生效](https://dev.mysql.com/doc/refman/8.0/en/privilege-changes.html)。见 [TiDB #39356](https://github.com/pingcap/tidb/issues/39356)。
 
 ## 另请参阅
 

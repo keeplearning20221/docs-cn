@@ -1,6 +1,6 @@
 ---
 title: ADMIN CHECKSUM TABLE
-summary: TiDB 数据库中 ADMIN CHECKSUM TABLE 的使用概况。
+summary: 平凯数据库中 ADMIN CHECKSUM TABLE 的使用概况。
 ---
 
 # ADMIN CHECKSUM TABLE

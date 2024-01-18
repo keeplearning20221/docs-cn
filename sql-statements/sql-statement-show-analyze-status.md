@@ -1,15 +1,15 @@
 ---
 title: SHOW ANALYZE STATUS
-summary: TiDB 数据库中 SHOW ANALYZE STATUS 的使用概况。
+summary: 平凯数据库中 SHOW ANALYZE STATUS 的使用概况。
 ---
 
 # SHOW ANALYZE STATUS
 
-`SHOW ANALYZE STATUS` 语句提供 TiDB 正在执行的统计信息收集任务以及有限条历史任务记录。
+`SHOW ANALYZE STATUS` 语句提供 TiDB Server 正在执行的统计信息收集任务以及有限条历史任务记录。
 
-从 TiDB v6.1.0 起，执行 `SHOW ANALYZE STATUS` 语句将显示集群级别的任务，且 TiDB 重启后仍能看到重启之前的任务记录。在 TiDB v6.1.0 之前，执行 `SHOW ANALYZE STATUS` 语句仅显示实例级别的任务，且 TiDB 重启后任务记录会被清空。
+从 v6.1.0 起，执行 `SHOW ANALYZE STATUS` 语句将显示集群级别的任务，且 TiDB Server 重启后仍能看到重启之前的任务记录。在 v6.1.0 之前，执行 `SHOW ANALYZE STATUS` 语句仅显示实例级别的任务，且 TiDB Server 重启后任务记录会被清空。
 
-从 TiDB v6.1.0 起，你可以通过系统表 `mysql.analyze_jobs` 查看过去 7 天内的历史记录。
+从 v6.1.0 起，你可以通过系统表 `mysql.analyze_jobs` 查看过去 7 天内的历史记录。
 
 ## 语法图
 
@@ -64,7 +64,7 @@ mysql> show analyze status;
 
 ## MySQL 兼容性
 
-该语句是 TiDB 对 MySQL 语法的扩展。
+该语句是平凯数据库对 MySQL 语法的扩展。
 
 ## 另请参阅
 

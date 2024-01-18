@@ -1,11 +1,11 @@
 ---
 title: SHOW PLUGINS
-summary: TiDB 数据库中 SHOW PLUGINS 的使用概况。
+summary: 平凯数据库中 SHOW PLUGINS 的使用概况。
 ---
 
 # SHOW PLUGINS
 
-`SHOW PLUGINS` 用于查看 TiDB 安装的插件，各个插件运行的状态以及插件版本信息。
+`SHOW PLUGINS` 用于查看平凯数据库安装的插件，各个插件运行的状态以及插件版本信息。
 
 ## 语法图
 
@@ -53,4 +53,4 @@ SHOW PLUGINS LIKE 'a%';
 
 ## MySQL 兼容性
 
-`SHOW PLUGINS` 语句与 MySQL 完全兼容。如发现任何兼容性差异，请尝试 [TiDB 支持资源](/support.md)。
+`SHOW PLUGINS` 语句与 MySQL 完全兼容。如发现任何兼容性差异，请在 GitHub 上提交 [issue](https://github.com/pingcap/tidb/issues/new/choose)。

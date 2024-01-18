@@ -1,6 +1,6 @@
 ---
 title: SHOW [FULL] PROCESSLIST
-summary: TiDB 数据库中 SHOW [FULL] PROCESSLIST 的使用概况。
+summary: 平凯数据库中 SHOW [FULL] PROCESSLIST 的使用概况。
 ---
 
 # SHOW [FULL] PROCESSLIST
@@ -43,7 +43,7 @@ SHOW PROCESSLIST;
 
 ## MySQL 兼容性
 
-* TiDB 中的 `State` 列是非描述性的。在 TiDB 中，将状态表示为单个值更复杂，因为查询是并行执行的，而且每个 Go 线程在任一时刻都有不同的状态。
+* TiDB 中的 `State` 列是非描述性的。在平凯数据库中，将状态表示为单个值更复杂，因为查询是并行执行的，而且每个 Go 线程在任一时刻都有不同的状态。
 
 ## 另请参阅
 

@@ -1,11 +1,11 @@
 ---
 title: SHOW PRIVILEGES
-summary: TiDB 数据库中 SHOW PRIVILEGES 的使用概况。
+summary: 平凯数据库中 SHOW PRIVILEGES 的使用概况。
 ---
 
 # SHOW PRIVILEGES
 
-`SHOW PRIVILEGES` 语句用于显示 TiDB 中可分配权限的列表。此列表为静态列表，不反映当前用户的权限。
+`SHOW PRIVILEGES` 语句用于显示平凯数据库中可分配权限的列表。此列表为静态列表，不反映当前用户的权限。
 
 ## 语法图
 
@@ -81,7 +81,7 @@ mysql> show privileges;
 
 ## MySQL 兼容性
 
-`SHOW PRIVILEGES` 语句与 MySQL 完全兼容。如发现任何兼容性差异，请尝试 [TiDB 支持资源](/support.md)。
+`SHOW PRIVILEGES` 语句与 MySQL 完全兼容。如发现任何兼容性差异，请在 GitHub 上提交 [issue](https://github.com/pingcap/tidb/issues/new/choose)。
 
 ## 另请参阅
 

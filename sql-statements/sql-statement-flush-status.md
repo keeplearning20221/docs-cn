@@ -1,11 +1,11 @@
 ---
 title: FLUSH STATUS
-summary: TiDB 数据库中 FLUSH STATUS 的使用概况。
+summary: 平凯数据库中 FLUSH STATUS 的使用概况。
 ---
 
 # FLUSH STATUS
 
-`FLUSH STATUS` 语句用于提供 MySQL 兼容性，但在 TiDB 上并无作用。因为 TiDB 使用 Prometheus 和 Grafana 而非 `SHOW STATUS` 来进行集中度量收集。
+`FLUSH STATUS` 语句用于提供 MySQL 兼容性，但在平凯数据库上并无作用。因为平凯数据库使用 Prometheus 和 Grafana 而非 `SHOW STATUS` 来进行集中度量收集。
 
 ## 语法图
 

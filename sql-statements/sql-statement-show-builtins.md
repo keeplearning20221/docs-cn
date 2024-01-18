@@ -1,11 +1,11 @@
 ---
 title: SHOW BUILTINS
-summary: TiDB 数据库中 SHOW BUILTINS 的使用概况。
+summary: 平凯数据库中 SHOW BUILTINS 的使用概况。
 ---
 
 # SHOW BUILTINS
 
-`SHOW BUILTINS` 语句用于列出 TiDB 中所有的内置函数。
+`SHOW BUILTINS` 语句用于列出平凯数据库中所有的内置函数。
 
 ## 语法图
 
@@ -300,4 +300,4 @@ SHOW BUILTINS;
 
 ## MySQL 兼容性
 
-该语句是 TiDB 对 MySQL 语法的扩展。
+该语句是平凯数据库对 MySQL 语法的扩展。

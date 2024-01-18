@@ -1,6 +1,6 @@
 ---
 title: PREPARE
-summary: TiDB 数据库中 PREPARE 的使用概况。
+summary: 平凯数据库中 PREPARE 的使用概况。
 ---
 
 # PREPARE
@@ -67,7 +67,7 @@ Query OK, 0 rows affected (0.00 sec)
 
 ## MySQL 兼容性
 
-`PREPARE` 语句与 MySQL 完全兼容。如发现任何兼容性差异，请尝试 [TiDB 支持资源](/support.md)。
+`PREPARE` 语句与 MySQL 完全兼容。如发现任何兼容性差异，请在 GitHub 上提交 [issue](https://github.com/pingcap/tidb/issues/new/choose)。
 
 ## 另请参阅
 

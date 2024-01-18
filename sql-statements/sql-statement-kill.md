@@ -1,11 +1,11 @@
 ---
 title: KILL
-summary: TiDB 数据库中 KILL 的使用概况。
+summary: 平凯数据库中 KILL 的使用概况。
 ---
 
 # KILL
 
-`KILL` 语句可以终止当前 TiDB 集群中任意一个 TiDB 实例中的某个连接。
+`KILL` 语句可以终止当前平凯数据库集群中任意一个 TiDB 实例中的某个连接。
 
 ## 语法图
 
@@ -45,14 +45,14 @@ Query OK, 0 rows affected (0.00 sec)
 
 ## MySQL 兼容性
 
-- MySQL 的 `KILL` 语句仅能终止当前连接的 MySQL 实例上的连接，TiDB 的 `KILL` 语句能终止整个集群中任意一个 TiDB 实例上的连接。
+- MySQL 的 `KILL` 语句仅能终止当前连接的 MySQL 实例上的连接，平凯数据库的 `KILL` 语句能终止整个集群中任意一个 TiDB 实例上的连接。
 - 暂时不支持使用 MySQL 命令行 <kbd>ctrl</kbd>+<kbd>c</kbd> 终止查询或连接。
 
 ## 行为变更说明
 
-TiDB 从 v6.1.0 起新增 Global Kill 功能（由 [`enable-global-kill`](/tidb-configuration-file.md#enable-global-kill-从-v610-版本开始引入) 配置项控制，默认启用）。启用 Global Kill 功能时，`KILL` 语句和 `KILL TIDB` 语句均能跨节点终止查询或连接，且无需担心错误地终止其他查询或连接。当你使用客户端连接到任何一个 TiDB 节点执行 `KILL` 语句或 `KILL TIDB` 语句时，该语句会被转发给对应的 TiDB 节点。当客户端和 TiDB 中间有代理时，`KILL` 及 `KILL TIDB` 语句也会被转发给对应的 TiDB 节点执行。
+从 v6.1.0 起新增 Global Kill 功能（由 [`enable-global-kill`](/tidb-configuration-file.md#enable-global-kill-从-v610-版本开始引入) 配置项控制，默认启用）。启用 Global Kill 功能时，`KILL` 语句和 `KILL TIDB` 语句均能跨节点终止查询或连接，且无需担心错误地终止其他查询或连接。当你使用客户端连接到任何一个 TiDB 节点执行 `KILL` 语句或 `KILL TIDB` 语句时，该语句会被转发给对应的 TiDB 节点。当客户端和 TiDB Server 中间有代理时，`KILL` 及 `KILL TIDB` 语句也会被转发给对应的 TiDB 节点执行。
 
-对于 TiDB v6.1.0 之前的版本，或未启用 Global Kill 功能时：
+对于 v6.1.0 之前的版本，或未启用 Global Kill 功能时：
 
 - `KILL` 语句与 MySQL 不兼容，负载均衡器后面通常放有多个 TiDB 服务器，这种不兼容有助于防止在错误的 TiDB 服务器上终止连接。你需要显式地增加 `TIDB` 后缀，通过执行 `KILL TIDB` 语句来终止当前连接的 TiDB 实例上的其他连接。
 - **强烈不建议**在配置文件里设置 [`compatible-kill-query = true`](/tidb-configuration-file.md#compatible-kill-query)，**除非**你确定客户端将始终连接到同一个 TiDB 节点。这是因为当你在默认的 MySQL 客户端按下 <kbd>ctrl</kbd>+<kbd>c</kbd> 时，客户端会开启一个新连接，并在这个新连接中执行 `KILL` 语句。此时，如果客户端和 TiDB 中间有代理，新连接可能会被路由到其他的 TiDB 节点，从而错误地终止其他会话。

@@ -1,6 +1,6 @@
 ---
 title: SHOW [GLOBAL|SESSION] BINDINGS
-summary: TiDB 数据库中 SHOW [GLOBAL|SESSION] BINDINGS 的使用概况。
+summary: 平凯数据库中 SHOW [GLOBAL|SESSION] BINDINGS 的使用概况。
 ---
 
 # SHOW [GLOBAL|SESSION] BINDINGS
@@ -140,12 +140,12 @@ Original_sql: select * from t1 where b = ?
 
 ## MySQL 兼容性
 
-`SHOW [GLOBAL|SESSION] BINDINGS` 语句是 TiDB 对 MySQL 语法的扩展。
+`SHOW [GLOBAL|SESSION] BINDINGS` 语句是平凯数据库对 MySQL 语法的扩展。
 
 ## 另请参阅
 
 * [CREATE [GLOBAL|SESSION] BINDING](/sql-statements/sql-statement-create-binding.md)
 * [DROP [GLOBAL|SESSION] BINDING](/sql-statements/sql-statement-drop-binding.md)
 * [ANALYZE](/sql-statements/sql-statement-analyze-table.md)
-* [Optimizer Hints](/optimizer-hints.md)
+* Optimizer Hints
 * [执行计划管理 (SPM)](/sql-plan-management.md)

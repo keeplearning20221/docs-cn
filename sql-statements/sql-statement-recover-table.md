@@ -38,17 +38,17 @@ NUM ::= intLit
 
 如果删除表后并过了 GC lifetime，就不能再用 `RECOVER TABLE` 来恢复被删除的表了，执行 `RECOVER TABLE` 语句会返回类似错误：`snapshot is older than GC safe point 2019-07-10 13:45:57 +0800 CST`。
 
-对于 3.0.0 及之后的 TiDB 版本，不推荐在使用 TiDB Binlog 的情况下使用 `RECOVER TABLE` 功能。
+对于 3.0.0 及之后版本，不推荐在使用 TiDB Binlog 的情况下使用 `RECOVER TABLE` 功能。
 
 TiDB Binlog 在 3.0.1 支持 `RECOVER TABLE` 后，可在下面的情况下使用 `RECOVER TABLE`：
 
 * 3.0.1+ 版本的 TiDB Binlog
-* 主从集群都使用 TiDB 3.0
+* 主从集群都使用 3.0 版本
 * 从集群 GC lifetime 一定要长于主集群（不过由于上下游同步的延迟，可能也会造成下游 recover 失败）
 
 ### TiDB Binlog 同步错误处理
 
-当使用 TiDB Binlog 同步工具时，上游 TiDB 使用 `RECOVER TABLE` 后，TiDB Binlog 可能会因为下面几个原因造成同步中断：
+当使用 TiDB Binlog 同步工具时，上游集群使用 `RECOVER TABLE` 后，TiDB Binlog 可能会因为下面几个原因造成同步中断：
 
 * 下游数据库不支持 `RECOVER TABLE` 语句。类似错误：`check the manual that corresponds to your MySQL server version for the right syntax to use near 'RECOVER TABLE table_name'`。
 
@@ -56,7 +56,7 @@ TiDB Binlog 在 3.0.1 支持 `RECOVER TABLE` 后，可在下面的情况下使�
 
 * 上下游数据库的同步延迟。类似错误：`snapshot is older than GC safe point 2019-07-10 13:45:57 +0800 CST`。
 
-只能通过重新[全量导入被删除的表](/ecosystem-tool-user-guide.md#备份和恢复---backup--restore)来恢复 TiDB Binlog 的数据同步。
+只能通过重新全量导入被删除的表来恢复 TiDB Binlog 的数据同步。
 
 ## 示例
 
@@ -119,8 +119,8 @@ TiDB 在删除表时，实际上只删除了表的元信息，并将需要删除
 
 所以，RECOVER TABLE 只需要在 GC Worker 还没删除表数据前，恢复表的元信息并删除 `mysql.gc_delete_range` 表中相应的行记录就可以了。恢复表的元信息可以用 TiDB 的快照读实现。具体的快照读内容可以参考[读取历史数据](/read-historical-data.md)文档。
 
-TiDB 中表的恢复是通过快照读获取表的元信息后，再走一次类似于 `CREATE TABLE` 的建表流程，所以 `RECOVER TABLE` 实际上也是一种 DDL。
+平凯数据库中表的恢复是通过快照读获取表的元信息后，再走一次类似于 `CREATE TABLE` 的建表流程，所以 `RECOVER TABLE` 实际上也是一种 DDL。
 
 ## MySQL 兼容性
 
-该语句是 TiDB 对 MySQL 语法的扩展。
+该语句是平凯数据库对 MySQL 语法的扩展。

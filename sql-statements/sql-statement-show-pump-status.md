@@ -1,6 +1,6 @@
 ---
 title: SHOW PUMP STATUS
-summary: TiDB 数据库中 SHOW PUMP STATUS 的使用概况。
+summary: 平凯数据库中 SHOW PUMP STATUS 的使用概况。
 ---
 
 # SHOW PUMP STATUS
@@ -28,7 +28,7 @@ SHOW PUMP STATUS;
 
 ## MySQL 兼容性
 
-该语句是 TiDB 对 MySQL 语法的扩展。
+该语句是平凯数据库对 MySQL 语法的扩展。
 
 ## 另请参阅
 

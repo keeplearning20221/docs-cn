@@ -1,6 +1,6 @@
 ---
 title: ADMIN RECOVER INDEX
-summary: TiDB 数据库中 ADMIN RECOVER INDEX 的使用概况。
+summary: 平凯数据库中 ADMIN RECOVER INDEX 的使用概况。
 ---
 
 # ADMIN RECOVER INDEX
@@ -64,7 +64,7 @@ Query OK, 0 rows affected (0.01 sec)
 
 ## MySQL 兼容性
 
-`ADMIN RECOVER INDEX` 语句是 TiDB 对 MySQL 语法的扩展。
+`ADMIN RECOVER INDEX` 语句是平凯数据库对 MySQL 语法的扩展。
 
 ## 另请参阅
 

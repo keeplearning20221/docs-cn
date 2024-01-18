@@ -1,11 +1,11 @@
 ---
 title: START TRANSACTION
-summary: TiDB 数据库中 START TRANSACTION 的使用概况。
+summary: 平凯数据库中 START TRANSACTION 的使用概况。
 ---
 
 # START TRANSACTION
 
-`START TRANSACTION` 语句用于在 TiDB 内部启动新事务。它类似于语句 `BEGIN`。
+`START TRANSACTION` 语句用于在 TiDB Server 内部启动新事务。它类似于语句 `BEGIN`。
 
 在没有 `START TRANSACTION` 语句的情况下，每个语句都会在各自的事务中自动提交，这样可确保 MySQL 兼容性。
 
@@ -66,8 +66,8 @@ Query OK, 0 rows affected (0.01 sec)
 
 ## MySQL 兼容性
 
-* 执行 `START TRANSACTION` 在 TiDB 中开启事务并立即生成快照。而在 MySQL 中，执行 `START TRANSACTION` 会开启事务但不会立即生成快照。TiDB 中的 `START TRANSACTION` 等同于 MySQL 中的 `START TRANSACTION WITH CONSISTENT SNAPSHOT`。
-* 为与 MySQL 兼容，TiDB 会解析 `START TRANSACTION READ ONLY` 语句，但解析后 TiDB 仍允许写入操作。
+* 执行 `START TRANSACTION` 在 TiDB Server 中开启事务并立即生成快照。而在 MySQL 中，执行 `START TRANSACTION` 会开启事务但不会立即生成快照。TiDB Server 中的 `START TRANSACTION` 等同于 MySQL 中的 `START TRANSACTION WITH CONSISTENT SNAPSHOT`。
+* 为与 MySQL 兼容，TiDB Server 会解析 `START TRANSACTION READ ONLY` 语句，但解析后 TiDB Server 仍允许写入操作。
 
 ## 另请参阅
 

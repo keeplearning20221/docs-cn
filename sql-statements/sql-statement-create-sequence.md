@@ -1,11 +1,11 @@
 ---
 title: CREATE SEQUENCE
-summary: CREATE SEQUENCE 在 TiDB 中的使用概况
+summary: CREATE SEQUENCE 在平凯数据库中的使用概况
 ---
 
 # CREATE SEQUENCE
 
-`CREATE SEQUENCE` 语句用于在 TiDB 中创建序列对象。序列是一种与表、视图对象平级的数据库对象，用于生成自定义的序列化 ID。
+`CREATE SEQUENCE` 语句用于在平凯数据库中创建序列对象。序列是一种与表、视图对象平级的数据库对象，用于生成自定义的序列化 ID。
 
 ## 语法图
 
@@ -80,7 +80,7 @@ CREATE [TEMPORARY] SEQUENCE [IF NOT EXISTS] sequence_name
 
 > **注意：**
 >
-> 在 TiDB 序列的实现中，`SETVAL` 函数并不能改变序列增长的初始步调或循环步调。在 `SETVAL` 之后只会返回符合步调规律的下一个有效的序列值。
+> 在平凯数据库序列的实现中，`SETVAL` 函数并不能改变序列增长的初始步调或循环步调。在 `SETVAL` 之后只会返回符合步调规律的下一个有效的序列值。
 
 ## 示例
 

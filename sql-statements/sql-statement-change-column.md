@@ -1,13 +1,13 @@
 ---
 title: CHANGE COLUMN
-summary: TiDB 数据库中 CHANGE COLUMN 的使用概况。
+summary: 平凯数据库中 CHANGE COLUMN 的使用概况。
 ---
 
 # CHANGE COLUMN
 
 `ALTER TABLE.. CHANGE COLUMN` 语句用于在已有表上更改列，包括对列进行重命名，和将数据改为兼容类型。
 
-从 v5.1.0 版本起，TiDB 开始支持 Reorg 数据的类型变更，包括但不限于：
+从 v5.1.0 版本起，平凯数据库开始支持 Reorg 数据的类型变更，包括但不限于：
 
 - 从 varchar 转换为 bigint 
 - decimal 精度修改

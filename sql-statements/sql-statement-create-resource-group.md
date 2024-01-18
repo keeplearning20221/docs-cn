@@ -1,6 +1,6 @@
 ---
 title: CREATE RESOURCE GROUP
-summary: TiDB 数据库中 CREATE RESOURCE GROUP 的使用概况。
+summary: 平凯数据库中 CREATE RESOURCE GROUP 的使用概况。
 ---
 
 # CREATE RESOURCE GROUP
@@ -37,7 +37,7 @@ ResourceGroupPriorityOption ::=
 
 资源组的 `ResourceGroupName` 是全局唯一的，不允许重复。
 
-TiDB 支持以下 `DirectResourceGroupOption`, 其中 [Request Unit (RU)](/tidb-resource-control.md#什么是-request-unit-ru) 是 TiDB 对 CPU、IO 等系统资源统一抽象的单位。
+平凯数据库支持以下 `DirectResourceGroupOption`, 其中 [Request Unit (RU)](/tidb-resource-control.md#什么是-request-unit-ru) 是 TiDB 对 CPU、IO 等系统资源统一抽象的单位。
 
 | 参数            | 含义           | 举例                                   |
 |---------------|--------------|--------------------------------------|
@@ -98,11 +98,11 @@ SELECT * FROM information_schema.resource_groups WHERE NAME ='rg1' or NAME = 'rg
 
 ## MySQL 兼容性
 
-MySQL 也支持 [CREATE RESOURCE GROUP](https://dev.mysql.com/doc/refman/8.0/en/create-resource-group.html)，但是接受的参数和 TiDB 不同，两者并不兼容。
+MySQL 也支持 [CREATE RESOURCE GROUP](https://dev.mysql.com/doc/refman/8.0/en/create-resource-group.html)，但是接受的参数和平凯数据库不同，两者并不兼容。
 
 ## 另请参阅
 
 * [DROP RESOURCE GROUP](/sql-statements/sql-statement-drop-resource-group.md)
 * [ALTER RESOURCE GROUP](/sql-statements/sql-statement-alter-resource-group.md)
 * [ALTER USER RESOURCE GROUP](/sql-statements/sql-statement-alter-user.md#修改用户绑定的资源组)
-* [RU](/tidb-resource-control.md#什么是-request-unit-ru)
+* RU

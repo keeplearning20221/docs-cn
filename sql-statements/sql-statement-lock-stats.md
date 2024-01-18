@@ -1,6 +1,6 @@
 ---
 title: LOCK STATS
-summary: TiDB 数据库中 LOCK STATS 的使用概况。
+summary: 平凯数据库中 LOCK STATS 的使用概况。
 ---
 
 # LOCK STATS
@@ -95,10 +95,10 @@ mysql> show warnings;
 
 ## MySQL 兼容性
 
-该语句是 TiDB 对 MySQL 语法的扩展。
+该语句是平凯数据库对 MySQL 语法的扩展。
 
 ## 另请参阅
 
-* [统计信息](/statistics.md#锁定统计信息)
+* 统计信息
 * [UNLOCK STATS](/sql-statements/sql-statement-unlock-stats.md)
 * [SHOW STATS_LOCKED](/sql-statements/sql-statement-show-stats-locked.md)
